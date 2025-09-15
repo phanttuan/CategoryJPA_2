@@ -9,6 +9,7 @@
 
         <class>entity.Category</class>
         <class>entity.User</class>
+        <class>entity.Video</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
         <properties>

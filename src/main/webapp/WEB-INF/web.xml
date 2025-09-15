@@ -13,6 +13,16 @@
 		<servlet-name>CategoryController</servlet-name>
 		<url-pattern>/CategoryController</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<description>VideoController</description>
+		<display-name>VideoController</display-name>
+		<servlet-name>VideoController</servlet-name>
+		<servlet-class>controller.VideoController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VideoController</servlet-name>
+		<url-pattern>/admin/video</url-pattern>
+	</servlet-mapping>
 	<display-name>23110355_JPA_Servlet</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

@@ -82,8 +82,12 @@ button {
 		</div>
 		<div class="d-flex justify-content-between align-items-center mb-3">
 			<h2 class="mb-0">Quản lý danh mục</h2>
-			<a class="btn btn-outline-danger"
-				href="${pageContext.request.contextPath}/logout">Logout</a>
+			<div>
+				<a class="btn btn-outline-primary me-2"
+					href="${pageContext.request.contextPath}/admin/video">Quản lý Video</a>
+				<a class="btn btn-outline-danger"
+					href="${pageContext.request.contextPath}/logout">Logout</a>
+			</div>
 		</div>
 		<div class="row g-4">
 			<!-- Danh sách danh mục -->
