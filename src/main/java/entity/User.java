@@ -137,4 +137,24 @@ public class User implements Serializable {
         categories.remove(c);
         c.setUser(null);
     }
+
+    public String getRole() {
+        switch (roleid) {
+            case 3: return "ADMIN";
+            case 2: return "MANAGER";
+            default: return "USER";
+        }
+    }
+
+    public void setRole(String role) {
+        if (role == null) {
+            this.roleid = 1;
+        } else if (role.equalsIgnoreCase("ADMIN")) {
+            this.roleid = 3;
+        } else if (role.equalsIgnoreCase("MANAGER")) {
+            this.roleid = 2;
+        } else {
+            this.roleid = 1;
+        }
+    }
 }

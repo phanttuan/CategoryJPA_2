@@ -57,4 +57,48 @@ public class UserDAO implements IUserDAO {
             em.close();
         }
     }
+
+    @Override
+    public void save(User user) {
+        EntityManager em = JPAConfig.em();
+        try {
+            em.getTransaction().begin();
+            em.persist(user);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            em.getTransaction().rollback();
+            throw e;
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
+    public void delete(int id) {
+        EntityManager em = JPAConfig.em();
+        try {
+            em.getTransaction().begin();
+            User user = em.find(User.class, id);
+            if (user != null) {
+                em.remove(user);
+            }
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            em.getTransaction().rollback();
+            throw e;
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
+    public java.util.List<User> findAll() {
+        EntityManager em = JPAConfig.em();
+        try {
+            TypedQuery<User> q = em.createQuery("SELECT u FROM User u", User.class);
+            return q.getResultList();
+        } finally {
+            em.close();
+        }
+    }
 }

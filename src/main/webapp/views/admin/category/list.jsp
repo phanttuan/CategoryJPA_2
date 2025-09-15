@@ -85,8 +85,8 @@ button {
 			<div>
 				<a class="btn btn-outline-primary me-2"
 					href="${pageContext.request.contextPath}/admin/video">Quản lý Video</a>
-				<a class="btn btn-outline-danger"
-					href="${pageContext.request.contextPath}/logout">Logout</a>
+				<a class="btn btn-outline-success me-2"
+					href="${pageContext.request.contextPath}/admin/user">Quản lý User</a>
 			</div>
 		</div>
 		<div class="row g-4">
